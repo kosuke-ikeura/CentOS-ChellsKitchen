@@ -18,12 +18,24 @@
  body {
      margin: 0;
      background-color: #fcefb5;
-     font-family: 'Avenir', 'Corbel', 'Yu Gothic', '游ゴシック', YuGothic, '遊ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
+     font-family: 'Bree Serif','Ubuntu','Avenir','M PLUS 1p', 'Corbel', 'Yu Gothic', '游ゴシック', YuGothic, '遊ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
  }
 
  header {
     height: 100px;
     background-color: #cc2931;
+ }
+ header nav .header-logo {
+     color: #ffffff;
+ }
+ footer nav .header-logo {
+     color: #ffffff;
+ }
+ ul {
+     list-style: none;
+ }
+ a {
+     text-decoration: none;
  }
 
 @media (max-width: 560px) {
@@ -92,12 +104,187 @@
     }
 }
 @media (min-width: 561px) {
+    .wrapper{
+        margin: 0 150px;
+    }
+    nav {
+        display: flex;
+        height: 100px;
+        margin: 0 150px;
+        justify-content: space-between;
+        line-height: 100px;
+        align-items: center;
+    }
+    
+    nav .header-logo{
+        font-size: 40px;
+        font-weight: bold;
+        text-shadow: 1px 1px 5px #841b20;
+    }
+    #header-items{
+        display: flex;
+    }
+    
+    #header-items li a {
+        color: #ffffff;
+        font-size: 16px;
+        text-align: center;
+        margin-left: 30px;
+        padding: 7px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        text-shadow: 1px 1px 2px #841b20;
+        box-shadow: 1px 1px 2px #841b20;
+    }
+    #header-items li:hover{
+        color: #841b20;
+    }
+    .dropdown {
+        display: none;
+    }
     .mobile-image {
         display: none;
     }
+    
     #main-image {
     height: 70vh;
-    background-image: url("main-image02.png");
-    background-color: cover;
+    width: 100%;
+    background-image: url("main-image-vagrant.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    #main-image h2 {
+        margin: 0px;
+        padding-left: 150px;
+        padding-top: 220px;
+        font-size: 45px;
+        line-height: 1.1em;
+        color: #ffffff;
+        font-weight: 300;
+        text-shadow: 1px 2px 3px #4d8c9b;
+    }
+    .section  {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(228, 218, 171, 0.5);
+        margin-top: 100px;
+        border-radius: 10px;
+        padding: 100px;
+        align-items: center;
+    }
+    .section:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .number {
+        width: 450px;
+    }
+    .image {
+        width: calc(100% - 500px - 50px);
+    }
+    .image img {
+        width: 200px;
+    }
+    .section:nth-child(even) .image img {
+        display: block;
+        margin-left: auto;
+    }
+
+    .text-title {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .text-p {
+        font-size: 18px;
+    }
+    
+    .try-use img {
+        display: block;
+        margin: 100px auto;
+        /* border-radius: 10px; */
+    }
+    footer {
+        height: 100px;
+        background-color: #cc2931;
+    }
+    nav {
+        display: flex;
+        height: 100px;
+        margin: 0 150px;
+        justify-content: space-between;
+        line-height: 100px;
+        align-items: center;
+    }
+    
+    nav .header-logo{
+        font-size: 40px;
+        font-weight: bold;
+        text-shadow: 1px 1px 5px #841b20;
+    }
+    #footer-items{
+        display: flex;
+        margin: 0;
+    }
+    
+    #footer-items li a {
+        color: #ffffff;
+        font-size: 16px;
+        text-align: center;
+        margin-left: 30px;
+        padding: 7px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        text-shadow: 1px 1px 2px #841b20;
+        box-shadow: 1px 1px 2px #841b20;
+    }
+    #footer-items li:hover{
+        color: #841b20;
     }
 }
+
+/* start resistration css */
+.resistration-wrapper h2 {
+    font-size: 28px;
+    font-weight:700;
+    margin: 50px 0;
+    color: #cc2931;
+}
+.fill-in-wrapper {
+    background-color: #e4daab;
+    border-radius: 10px;
+    padding: 100px;
+}
+.fill-in-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fill-in-wrapper dt {
+    font-size: 25px;
+    color: #cc2931;
+    font-weight: 500;
+}
+.fill-in-wrapper dd {
+    width: calc(100% - 200px);
+    margin: 0;
+    margin-left: auto;
+}
+.name input {
+    display: block;
+    width: 200px;
+    margin-left: 178px;
+    box-shadow: 0px 2px 4px #9f9876;
+    border-radius: 5px;
+    border: 0;
+    height: 24px;
+}
+.long input {
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    box-shadow: 0px 2px 4px #9f9876;
+    border-radius: 5px;
+    border: 0;
+    height: 24px;
+}
+/* end resistraiton css */

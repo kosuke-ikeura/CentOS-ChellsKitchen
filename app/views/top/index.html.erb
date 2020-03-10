@@ -1,15 +1,17 @@
 <div>
     <%= image_tag 'mobile-main.png', class: "mobile-image" %>
     <div id="main-image">
+        <h2><span style="color: #cc2931">Chells Kitchen</span>は<br>キッチンの調味料の<br>調整をするサービスです。</h2>
     </div>
+    <div class="wrapper">
     <section>
-        <div class="section1">
+        <div class="section1 section">
             <div class="number">
                 <%= image_tag '01.png', class: "number-image" %>
                 <div class="text">
                     <h2 class="text-title">どこでも調味料の状態が<br>わかります</h2>
-                    <p class="text-p">調味料が切れそうだったらChells-Kitchenを利用しよう。<br>
-                    サイト上で調味料を更新すれば、寮生に通知が入ります。<br>
+                    <p class="text-p">調味料が切れそうならChells-Kitchenを利用しよう。<br>
+                    Web上で調味料を更新すれば、寮生に通知が入ります。<br>
                     外出中の寮生に買ってきてもらいましょう。
                     </p>
                 </div>
@@ -18,7 +20,7 @@
                 <%= image_tag "iphone.png" %>
             </div>
         </div>
-        <div class="section2">
+        <div class="section2 section">
             <div class="number">
                 <%= image_tag '02.png', class: "number-image" %>
                 <div class="text02">
@@ -35,7 +37,7 @@
                 <%= image_tag "send.png" %>
             </div>
         </div>
-        <div class="section3">
+        <div class="section3 section">
             <div class="number">
                 <%= image_tag '03.png', class: "number-image" %>
                 <div class="text02">
@@ -48,11 +50,14 @@
                 </div>
             </div>
             <div class="image">
-                <%= image_tag "kosuke_photo.png" %>
+                <%= image_tag "suke.png"%>
             </div>
         </div>
     </section>
     <div class="try-use">
-        <%= image_tag "try-use.png" %>
+        <%= link_to new_user_registration_path do %>
+            <%= image_tag "try-use.png" %>
+        <% end %>
+    </div>
     </div>
 </div>
