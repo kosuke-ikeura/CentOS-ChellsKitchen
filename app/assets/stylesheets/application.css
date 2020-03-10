@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ body {
+     margin: 0;
+     background-color: #fcefb5;
+     font-family: 'Avenir', 'Corbel', 'Yu Gothic', '游ゴシック', YuGothic, '遊ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
+ }
+
+ header {
+    height: 100px;
+    background-color: #cc2931;
+ }
+
+@media (max-width: 560px) {
+    nav {
+        display: flex;
+        height: 100px;
+        line-height: 100px;
+        margin: 0 30px;
+        justify-content: space-between;
+    }
+
+    nav .header-logo img {
+        vertical-align: middle;
+    }
+
+    nav .dropdown {
+        margin-left: auto;
+    }
+
+    .mobile-image {
+        width: 100%;
+    }
+    section {
+        margin: 0 30px;
+    }
+
+    .section1 {
+        margin-top: 50px;
+    }
+
+    .number-image {
+        width: 56px;
+        height: 37px;
+    }
+
+    .text-title {
+        font-size: 20px;
+    }
+    .text-p {
+        font-size: 14px;
+    }
+    .image {
+        width: 170px;
+        height: 230px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    .image img {
+        width: 170px;
+        height: 230px;
+    }
+    .section2 {
+        margin-top: 50px;
+    }
+    .section3 {
+        margin-top: 50px;
+    }
+    .try-use {
+        width: 200px;
+        height: 50px;
+        margin: 50px auto;
+    }
+    .try-use img {
+        width: 200px;
+        height: 50px;
+    }
+}
+@media (min-width: 561px) {
+    .mobile-image {
+        display: none;
+    }
+    #main-image {
+    height: 70vh;
+    background-image: url("main-image02.png");
+    background-color: cover;
+    }
+}
