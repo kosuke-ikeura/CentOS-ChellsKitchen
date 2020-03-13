@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_10_045212) do
+ActiveRecord::Schema.define(version: 2020_03_12_124122) do
 
   create_table "flavors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.integer "purchace_price"
+    t.integer "purchase_price"
     t.integer "summit_price"
-    t.string "status"
+    t.integer "status"
     t.integer "user_id"
+    t.text "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

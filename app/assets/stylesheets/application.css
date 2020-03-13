@@ -38,8 +38,12 @@
      text-decoration: none;
  }
 
+ button, input, select, textarea {
+    font-family : inherit;
+    font-size   : 100%;
+  }
 @media (max-width: 560px) {
-    nav {
+    nav.header-flex {
         display: flex;
         height: 100px;
         line-height: 100px;
@@ -102,15 +106,108 @@
         width: 200px;
         height: 50px;
     }
+    /* start resistration css */
+    .form-wrapper {
+        background-color: rgba(228, 218, 171, 0.5);
+        border-radius: 3px;
+    }
+    .resistration-wrapper > h2 {
+        color: #cc2931;
+        margin: 50px 0;
+    }
+    table {
+        border-collapse: collapse;
+    }
+
+    .form-table,
+    input,
+    select, 
+    button {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -webkit-box-shadow: none;
+        border: none;
+        outline: none;
+        box-shadow: none;
+    } 
+
+    .form-table input {
+        background: #f8f8f8;
+        display: block;
+        font-size: 16px;
+        padding: 12px 15px;
+        width: 100%;
+        transition: 0.8s;
+        border-radius: 3px;
+    }
+
+
+    .form-table input:focus {
+        background: #e9f5fb;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .form-table input#name {
+        width: 240px;
+    }
+
+    input::placeholder {
+    color: #ccc;
+    }
+    .form-table {
+        width: 100%;
+    }
+    .form-table th,
+    .form-table td {
+    padding: 20px;
+    }
+
+    
+    .form-table th {
+    padding-left: 50px;
+    position: relative;
+    text-align: left;
+    width: 300px;
+    color: #cc2931;
+    font-size: 20px;
+    }
+    .form-table th,
+    .form-table td {
+    display: block;
+    width: 100%;
+    }
+
+    .form-table tbody tr:nth-child(n + 2) {
+        border-top: 3px dotted #e4daab;
+    }
+    .action-wrapper {
+        height: 92px;
+        margin-bottom: 50px;
+    }
+
+    input.action {
+        display: block;
+        width:120px;
+        height:50px;
+        background: #313186;
+        color: #f5f5ff;
+        border-radius: 3px;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 40px;
+        margin-left: auto;
+    }
+
+    /* end resistraiton css */
 }
 @media (min-width: 561px) {
     .wrapper{
-        margin: 0 150px;
+        margin: 0 10vw;
     }
-    nav {
+    nav.header-flex {
         display: flex;
         height: 100px;
-        margin: 0 150px;
+        margin: 0 10vw;
         justify-content: space-between;
         line-height: 100px;
         align-items: center;
@@ -207,10 +304,10 @@
         height: 100px;
         background-color: #cc2931;
     }
-    nav {
+    nav.footer-flex {
         display: flex;
         height: 100px;
-        margin: 0 150px;
+        margin: 0 10vw;
         justify-content: space-between;
         line-height: 100px;
         align-items: center;
@@ -243,48 +340,153 @@
 }
 
 /* start resistration css */
-.resistration-wrapper h2 {
-    font-size: 28px;
-    font-weight:700;
-    margin: 50px 0;
+.form-wrapper {
+    background-color: rgba(228, 218, 171, 0.5);
+    border-radius: 3px;
+}
+.resistration-wrapper > h2 {
     color: #cc2931;
+    margin: 50px 0;
 }
-.fill-in-wrapper {
-    background-color: #e4daab;
-    border-radius: 10px;
-    padding: 100px;
+table {
+    border-collapse: collapse;
 }
-.fill-in-flex {
+
+.form-table,
+input,
+select, 
+button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+} 
+
+.form-table input {
+    background: #f8f8f8;
+    display: block;
+    font-size: 16px;
+    padding: 12px 15px;
+    width: 80%;
+    transition: 0.8s;
+    border-radius: 3px;
+}
+
+
+.form-table input:focus {
+    background: #e9f5fb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.form-table input#name {
+    width: 240px;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+.form-table {
+    width: 100%;
+}
+.form-table th,
+.form-table td {
+  padding: 40px;
+}
+ 
+.form-table th {
+  padding-left: 50px;
+  position: relative;
+  text-align: left;
+  width: 300px;
+  color: #cc2931;
+  font-size: 20px;
+}
+
+.form-table tbody tr:nth-child(n + 2) {
+    border-top: 3px dotted #e4daab;
+}
+.action-wrapper {
+    height: 92px;
+    width: 77%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+input.action {
+    display: block;
+    width:120px;
+    height:50px;
+    background: #313186;
+    color: #f5f5ff;
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* end resistraiton css */
+
+/* start /flavors css  */
+.flavors-pagination-wrapper {
+    background-color: rgba(228, 218, 171, 0.5);
+}
+.flavors-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 3em;
+    padding: 3em;
+}
+
+a.StatusImage img {
+    width: 70px;
+    height: 70px;
+}
+.flavor {
     display: flex;
     align-items: center;
+    background-color: #ffffff;
+    min-width: 0;
+    overflow: auto;
+    border-radius: 3px;
+}
+.flavor a img {
+    display: block;
+    margin-left: 30px;
+}
+.flavor > p {
+    display: inline-block;
+    width: 55%;
+    font-size: 2em;
+    flex-shrink: 0;
+    margin-left: 10%;
+}
+/* .empty {
+    grid-column: span 2;
+} */
+nav.pagination {
+    width: 375px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border: 3px dotted #e4daab;
     justify-content: space-between;
+    padding: 20px 30px;
+    border-radius: 3px;
 }
-.fill-in-wrapper dt {
-    font-size: 25px;
+span {
     color: #cc2931;
-    font-weight: 500;
+    font-size: 1em;
 }
-.fill-in-wrapper dd {
-    width: calc(100% - 200px);
-    margin: 0;
-    margin-left: auto;
+span > a {
+    color: #000000;
 }
-.name input {
-    display: block;
-    width: 200px;
-    margin-left: 178px;
-    box-shadow: 0px 2px 4px #9f9876;
-    border-radius: 5px;
-    border: 0;
-    height: 24px;
+span.translation_missing {
+    color: #000000;
 }
-.long input {
-    display: block;
-    width: 400px;
-    margin-left: auto;
-    box-shadow: 0px 2px 4px #9f9876;
-    border-radius: 5px;
-    border: 0;
-    height: 24px;
-}
-/* end resistraiton css */
+
+
+/* end /flavors css */
